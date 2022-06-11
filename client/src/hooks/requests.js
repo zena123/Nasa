@@ -1,6 +1,17 @@
+const API_URL = 'http//localhost:8000';
+
 async function httpGetPlanets() {
-  // TODO: Once API is ready.
-  // Load planets and return as JSON.
+  /* 
+  our client and server are on deifferent ports
+  built in fetch to our browser,
+  fetch return a promise object 
+  we are return in controller json , array of js objects 
+
+  SO LOAD PLANETS AND RETURN JSON
+  */
+  const response = await fetch(`${API_URL}/planets`);
+  return response.json(); // return promise too
+
 }
 
 async function httpGetLaunches() {
